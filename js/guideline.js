@@ -253,6 +253,43 @@ var val = Number.parseInt(inputValue, 10);
 // Для приведения к логическому типу
 var hasAge = Boolean(age);
 
+// Проверка типов
+// Проверка на string
+if (typeof variable === 'string') {}
+
+// Проверка на number
+if (typeof variable === 'number') {}
+
+// Проверка на boolean
+if (typeof variable === 'boolean') {}
+
+// Проврека на object
+if (typeof variable === 'object') {}
+
+// Проверка на array
+if (Array.isArray(variable)) {}
+
+// Проверка на element node
+if (elem.nodeType === 1) {}
+
+// Проверка на null
+if (element === null) {}
+
+// Проверка на null or undefined
+if (element == null) {}
+
+// Проверка на undefined Глобальные переменные
+if (typeof variable === 'undefined') {}
+
+// Проверка на undefined Локальные переменные
+if (variable === undefined) {}
+
+// Проверка содержит ли объект свойство или метод, без проверки в цепочке прототипов
+if (obj.hasOwnProperty('name')) {}
+
+// Проверка содержит ли объект свойство или метод, с проверкой в цепочке прототипов
+if ('name' in obj) {}
+
 // Если вам необходимо создать функцию для доступа к переменной, используйте раздельные функции getVal, setVal
 person.setAge(25);
 person.getAge();
