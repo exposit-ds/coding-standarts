@@ -334,7 +334,7 @@ eventsProvider.trigger('someEvent', { user : mike });
 // Добавьте метод noConflict(), устанавливающий экспортируемый модуль в состояние предыдущей версии.
 // Всегда объявляйте 'use strict'; в начале модуля.
 
-// fancyInput/fancyInput.js
+// fancyInput/fancyInput.javaScript
 !function(global) {
     'use strict';
 
