@@ -261,3 +261,56 @@ person.getAge();
 if (!person.hasAge()) {
 
 }
+
+// Присваиваем метод прототипу вместо замены прототипа на другой объект
+Person.prototype.setAge = function(age) {
+    this.age = age;
+};
+
+// Если возвращаем this для построения цепочек вызовов, то следует реализовать одинаковое поведение
+// для всех методов кроме геттеров
+Person.prototype.move = function(distance) {
+    //code
+    return this;
+};
+
+Person.prototype.stop = function() {
+    //code
+    return this;
+};
+var mike = new Person();
+
+// При использование цепочек вызовов используем переносы строки, не стоит писать все в одну строку
+mike.move(25)
+    .stop();
+
+// Подключая набор данных к событиям, всегда передаем объект вместо простой переменной.
+// Это позволяет в процессе всплытия событий добавлять к данному объекту дополнительную информацию.
+eventsProvider.trigger('someEvent', { user : mike });
+
+
+// Объявление модулей
+// Модуль должен начинаться с !. За счет этого даже некорректно сформированный модуль,
+// в конце которого отсутствует точка с запятой, не вызовет ошибок при автоматической сборке скриптов.
+// Файл должен быть именован с camelCase, находиться в папке с тем же именем,
+// и совпадать с именем экспортируемой переменной.
+// Добавьте метод noConflict(), устанавливающий экспортируемый модуль в состояние предыдущей версии.
+// Всегда объявляйте 'use strict'; в начале модуля.
+
+// fancyInput/fancyInput.js
+!function(global) {
+    'use strict';
+
+    var previousFancyInput = global.FancyInput;
+
+    function FancyInput(options) {
+        this.options = options || {};
+    }
+
+    FancyInput.noConflict = function noConflict() {
+        global.FancyInput = previousFancyInput;
+        return FancyInput;
+    };
+
+    global.FancyInput = FancyInput;
+}(this);
