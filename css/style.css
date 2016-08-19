@@ -120,3 +120,30 @@ html {  font-family: 'open sans', arial, sans-serif;  }
 
 /* Gallery description comment */
 .gallery {  position: relative;  }
+
+/* Don't use a lot of repetition. */
+.page-home {
+    background: url(home.jpg) center center no-repeat;
+}
+
+.page-about {
+    background: url(about.jpg) center center no-repeat;
+}
+
+.page-work {
+    background: url(work.jpg) center center no-repeat;
+}
+
+/* Rewrite previous*/
+.page {
+    background: no-repeat center;
+}
+
+.page-home  { background-image: url(home.jpg); }
+.page-about { background-image: url(about.jpg); }
+.page-work  { background-image: url(work.jpg); }
+
+/* Not recommended write longer selection */
+body.home div.header ul { }
+/* Better using selector */
+.primary-nav { }
