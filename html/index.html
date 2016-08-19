@@ -1,0 +1,69 @@
+<!doctype html>
+<!-- Use lang attribute -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title here</title>
+    <!-- Viewport meta tag when building a responsive or mobile website -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- IE compatibility mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- Attribute 'type' optional in html5 and not recomented to use if value is default -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <!-- Provide alternative contents for multimedia -->
+    <img src="http://www.exposit-ds.com/assets/templates/exposit/images/logo.png" alt="Exposit-logo">
+</nav>
+
+<!-- Use html5 tags. Don't use <div class="header"></div> -->
+<header>
+    <h1>Header</h1>
+</header>
+
+<!-- Use a new line for every block -->
+<section>
+    <h2>Section1</h2>
+    <article>
+        <h3>Article1</h3>
+        <!-- Recomended use closing tag, but a 'p' element’s end tag may be omitted. Read more informaion (https://www.w3.org/TR/html-markup/p.html) -->
+        <p>Test tag 'p'</p>
+        <!-- No closing tag. Don't use <br/> <hr/> -->
+        <br>
+        <!-- Don't write <p><em>Tag 'em'</p>, the final tag 'p'.</em> -->
+        <p><em>Tag 'em'</em>, the final tag 'p'.</p>
+    </article>
+    <article>
+        <h3>Arrticle2</h3>
+        <!-- Don't declare value of bolean attribute. Don't write disabled="true" -->
+        <input type="text" disabled>
+
+        <!-- Attribute order -->
+        <!-- * id
+             * class
+             * name, data-
+             * src, for, type, href, value
+             * title, alt
+             * role, aria-* -->
+        <a id="test-id" class="test-class" data-toggle="modal" href="#"></a>
+        <input class="test-class" type="text">
+        <img src="..." alt="...">
+
+        <!-- Reducing markup. Don't write
+            <span class="test-class">
+              <img src="..." alt="Reducing markup">
+            </span> -->
+        <img class="test-class" src="..." alt="Reducing markup">
+    </article>
+</section>
+
+<!-- Use double quotes around attribute values instead of single -->
+<a href="#">Tag 'a'</a>
+
+<script src="app.js"></script>
+<!-- Omit the protocol from embedded resources -->
+<!-- Attribute 'type' optional in html5 and not recomented to use if value is default -->
+<script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
+</body>
+</html>
