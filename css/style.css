@@ -1,0 +1,149 @@
+/* Use single quotation marks for attribute selectors and property values */
+html {  font-family: 'open sans', arial, sans-serif;  }
+
+/* Omit unit specification after '0' values and
+   omit leading '0's in values */
+.selector {
+    margin: 0;
+    padding: 0;
+    font-size: .8em;
+}
+
+/* Use shorthand properties where possible */
+.selector {
+    /* Don't write
+        padding-bottom: 2em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 3em;
+    */
+    padding: 3em 1em 2em;;
+}
+
+/* Use a space between the last selector and the declaration block and
+   Use a space after a property name’s colon */
+.selector {  position: absolute;  }
+
+/* Keep individual selectors to a single line */
+.selector,
+.selector-secondary,
+.selector[type='text'] {
+    padding: 15px;
+}
+
+/* The last declaration's semi-colon is optional, but recommended use semi-colon after every declaration */
+.selector {
+    position: absolute;
+    top: 0;
+}
+
+/* Don't include spaces after commas within rgb(), rgba(), hsl(), hsla(), or rect() values. */
+.selector {  background-color: rgba(0,0,0,.5);  }
+
+/* Use lowercase to all hex values */
+.selector {  background-color: #fff;  }
+
+/* Separate words in ID, keep classes lowercase and use dashes,
+   not recommended: .testclass or #test_id */
+.test-class,
+#test-id {  position: absolute;  }
+
+/* Prefix selectors with an application-specific prefix where possible,
+   using namespaces helps preventing naming conflicts */
+.tweet-header {}
+
+/* Declaration order:
+    1. Position
+    2. Box model
+    3. Typographic
+    4. Visual */
+.declaration-order {
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+
+    /* Box-model */
+    display: block;
+    float: right;
+    width: 100px;
+    height: 100px;
+
+    /* Typography */
+    font: normal 14px sans-serif;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+
+    /* Visual */
+    background-color: #f2f2f2;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    opacity: 1;
+}
+
+/* vendor prefixes should go longest (-webkit-) to shortest (unprefixed) */
+.selector {
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+.icon           { background-position: 0 0; }
+.icon-home      { background-position: 0 -20px; }
+.icon-account   { background-position: 0 -40px; }
+
+/* Single declarations on one line */
+.selector { width: 60px; }
+
+/* Multiple declarations, one per line */
+.selector {
+    display: block;
+    width: 50px;
+}
+
+/* Write explaining comments*/
+/* Wrapping element for .modal-title and .modal-close */
+.modal-header {
+    position: absolute;
+    top: 0 !important; /* need write why this is so !important */
+}
+
+/* Add section comments */
+/* Header description comment */
+.header {  position: relative;  }
+
+/* Footer description comment */
+.footer {  position: relative;  }
+
+/* Gallery description comment */
+.gallery {  position: relative;  }
+
+/* Don't use a lot of repetition. */
+.page-home {
+    background: url(home.jpg) center center no-repeat;
+}
+
+.page-about {
+    background: url(about.jpg) center center no-repeat;
+}
+
+.page-work {
+    background: url(work.jpg) center center no-repeat;
+}
+
+/* Rewrite previous*/
+.page {
+    background: no-repeat center;
+}
+
+.page-home  { background-image: url(home.jpg); }
+.page-about { background-image: url(about.jpg); }
+.page-work  { background-image: url(work.jpg); }
+
+/* Not recommended write longer selection */
+body.home div.header ul { }
+/* Better using selector */
+.primary-nav { }
