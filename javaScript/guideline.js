@@ -21,8 +21,8 @@ var str = 'Contrary to popular belief, Lorem Ipsum is not simply random text. ' 
 
 /** ES6 - ECMAScript 2015 */
 // Используем обратные кавычки ``
-var str = `Contrary to popular belief, Lorem Ipsum is not simply random text. 
-        It has roots in a piece of classical Latin literature from 45 BC, 
+var str = `Contrary to popular belief, Lorem Ipsum is not simply random text.
+        It has roots in a piece of classical Latin literature from 45 BC,
         making it over 2000 years old. Richard McClintock, a Latin professor at`;
 
 /** ES6 - ECMAScript 2015 */
@@ -175,8 +175,10 @@ if (name) { // Вместо name !== ''
 if (collection.length) { // Вместо collection.length > 0
 }
 
-// Используйте фигурные скобки для всех многострочных блоков, для однострочных не используйте
-if (test) console.log(test);
+// Используйте фигурные скобки как для многострочных, так и для однострочных блоков
+if (test) {
+  console.log(test);
+}
 
 if (test) {
     test++;
